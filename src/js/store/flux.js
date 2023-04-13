@@ -1,4 +1,10 @@
+import { useState, useEffect } from "react";
+
+
+
+
 const getState = ({ getStore, getActions, setStore }) => {
+	
 	return {
 		store: {
 			demo: [
@@ -15,7 +21,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]
 		},
 		actions: {
-			// Use getActions to call a function within a fuction
+			// Use getActions to call a function within a fuction //use this to make a favorites button
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
 			},
@@ -23,6 +29,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 				/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
+				
+				
+
+
+
+
 			},
 			changeColor: (index, color) => {
 				//get the store
